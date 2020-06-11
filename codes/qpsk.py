@@ -52,8 +52,8 @@ plt.ylabel('$P_e$')
 plt.legend()
 plt.grid()
 #if using termux
-#plt.savefig('./figs/qpsk.pdf')
-#plt.savefig('./figs/qpsk.eps')
-#subprocess.run(shlex.split("termux-open ./figs/qpsk.pdf"))
+plt.savefig('./figs/qpsk.pdf')
+plt.savefig('./figs/qpsk.eps')
+subprocess.run(shlex.split("termux-open ./figs/qpsk.pdf"))
 #else
-plt.show()
+#plt.show()
