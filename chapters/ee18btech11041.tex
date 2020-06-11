@@ -1,0 +1,125 @@
+\begin{enumerate}[label=\thesubsection.\arabic*.,ref=\thesubsection.\theenumi]
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+
+
+\item 
+QPSK 
+
+\begin{align}
+\textbf{y = s + n}
+\end{align}
+
+where \textbf{ s$\in$ \{$s_0$, $s_1$, $s_2$, $s_3$\} }
+
+\begin{align}
+    s_0 = 
+    \begin{pmatrix}
+     \sqrt{E_s} \\
+     0
+    \end{pmatrix}
+\end{align}
+
+\begin{align}
+    s_1 = 
+    \begin{pmatrix}
+     0\\
+     \sqrt{E_s}
+    \end{pmatrix}
+\end{align}
+
+
+\begin{align}
+    s_2 = 
+    \begin{pmatrix}
+     -\sqrt{E_s}\\
+     0
+    \end{pmatrix}
+\end{align}
+
+
+\begin{align}
+    s_3 = 
+    \begin{pmatrix}
+     0\\
+     -\sqrt{E_s}
+    \end{pmatrix}
+\end{align}
+
+\begin{figure}[!ht]
+                \resizebox{\columnwidth}{!}{\input{./figs/constellation.tex}}
+\label{fig:ee18btech11041_fig1}
+\caption{constellation diagram}
+\end{figure}
+
+
+\item Encoding
+
+$s_0$ denote bits 00, $s_1$ denote bits 01, $s_2$ denote bits 11,$s_3$ denote bits 10.
+
+\item Decoding
+
+
+
+\begin{figure}[!ht]
+
+                \resizebox{\columnwidth}{!}{\input{./figs/decision.tex}}
+
+\label{fig:ee18btech11041_fig2}
+\caption{decision regions}
+	
+\end{figure}
+
+Let \textbf{r} be the received bits, \textbf{r} = [$r_1$,$r_2$]. 
+\begin{align}
+    r_1 = 
+    \begin{cases}
+    0, &  \textbf{y} \in D1\cup D2 \Longleftrightarrow  y_1 + y_2 > 0\\
+    1, &  \textbf{y} \in D3\cup D4 \Longleftrightarrow  y_1 + y_2 < 0
+    \end{cases}
+    \label{eq:ee18btech11041_eq1}
+\end{align}
+
+\begin{align}
+    r_2 = 
+    \begin{cases}
+    0, &  \textbf{y} \in D1\cup D4 \Longleftrightarrow  y_2 - y_1 < 0\\
+    1, &  \textbf{y} \in D2\cup D3 \Longleftrightarrow  y_2 - y_1 > 0
+    \end{cases}
+    \label{eq:ee18btech11041_eq2}
+\end{align}
+
+From eq.\ref{eq:ee18btech11041_eq1} and eq.\ref{eq:ee18btech11041_eq2}
+\\
+For detecting $s_0$, $y_1 > -y_2$ and $y_1 > y_2$.
+\\
+For detecting $s_1$, $y_1>-y_2$ and $y_1<y_2$.
+\\
+For detecting $s_2$,  $y_1<-y_2$ and $y_1<y_2$.
+\\
+For detecting $s_3$, $y_1<-y_2$ and $y_1>y_2$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{enumerate}
