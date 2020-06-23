@@ -101,9 +101,7 @@ for k in range(len(snr_db)):
 			received.append("s3")
 	
 
-	for j in range(len(symbol)):
-
-		if symbol[j]!=received[j]:
+		if symbol[i]!=received[i]:
 			t+=1;
 
 	err.append((t/50000.0))
